@@ -1,6 +1,6 @@
 #!/bin/sh
 echo "----安装git、Python----"
-yum install git python
+yum install git python2
 echo "----获取py-kms---"
 git clone https://gitee.com/changmq267/py-kms.git
 echo "--获取py-kms成功--"
@@ -13,7 +13,7 @@ sudo mv py-kms /usr/local/py-kms
 echo "----创建启动项----"
 (
 cat <<EOF
-sudo python /usr/local/py-kms/server.py 
+sudo python2 /usr/local/py-kms/server.py 
 EOF
 ) > kms.sh
 sudo chmod +x kms.sh
